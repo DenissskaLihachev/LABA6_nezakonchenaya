@@ -31,7 +31,7 @@ void Book::getBook(Book*& Books, Book*& headBooks, Book*& tailBooks)
 {
 	if (Books == NULL && headBooks == NULL && tailBooks == NULL)
 	{
-		cout << "\n\tНечего выводить... ";
+		cout << "\nПусто";
 		return;
 	}
 
@@ -42,18 +42,24 @@ void Book::getBook(Book*& Books, Book*& headBooks, Book*& tailBooks)
 	while (true)
 	{
 		counter++;
-		cout << "\n\t" << counter << " Книги:";
+		cout << "\n" << counter << " Книги:";
 
 		Books->getPrintPublication();
 
-		if (s_subject != "None")		cout << "\tНазвание: " << this->s_subject;
-		if (i_subject != 0)				cout << "\tНазвание: " << this->i_subject;
+		if (s_subject != "None")		
+			cout << "\tНазвание: " << this->s_subject;
+		if (i_subject != 0)				
+			cout << "\tНазвание: " << this->i_subject;
 
-		if (s_author != "None")			cout << "\tАвтор: " << this->s_author;
-		if (i_author != 0)				cout << "\tАвтор: " << this->i_author;
+		if (s_author != "None")			
+			cout << "\tАвтор: " << this->s_author;
+		if (i_author != 0)				
+			cout << "\tАвтор: " << this->i_author;
 
-		if (s_numberOfPages != "None")	cout << "\tКоличество страниц: " << this->s_numberOfPages;
-		if (i_numberOfPages != 0)		cout << "\tКоличество страниц: " << this->i_numberOfPages;
+		if (s_numberOfPages != "None")	
+			cout << "\tКоличество страниц: " << this->s_numberOfPages;
+		if (i_numberOfPages != 0)		
+			cout << "\tКоличество страниц: " << this->i_numberOfPages;
 
 		if (Books->next == NULL) break;
 		Books = Books->next;

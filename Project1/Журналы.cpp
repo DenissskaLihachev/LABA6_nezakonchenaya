@@ -31,7 +31,7 @@ void Journal::getJournal(Journal*& Journals, Journal*& headJournals, Journal*& t
 {
 	if (Journals == NULL && headJournals == NULL && tailJournals == NULL)
 	{
-		cout << "\n\tНечего выводить... ";
+		cout << "\nПусто";
 		return;
 	}
 
@@ -42,15 +42,19 @@ void Journal::getJournal(Journal*& Journals, Journal*& headJournals, Journal*& t
 	while (true)
 	{
 		counter++;
-		cout << "\n\t" << counter << " Журнал:";
+		cout << "\n" << counter << " Журнал:";
 
 		Journals->getPrintPublication();
 
-		if (s_number != "None")			cout << "\tНомер: " << Journals->s_number;
-		if (i_number != 0)				cout << "\tНомер: " << Journals->i_number;
+		if (s_number != "None")			
+			cout << "\tНомер: " << Journals->s_number;
+		if (i_number != 0)				
+			cout << "\tНомер: " << Journals->i_number;
 
-		if (s_month != "None")			cout << "\tМесяц: " << Journals->s_month;
-		if (i_month != 0)				cout << "\tМесяц: " << Journals->i_month;
+		if (s_month != "None")			
+			cout << "\tМесяц: " << Journals->s_month;
+		if (i_month != 0)				
+			cout << "\tМесяц: " << Journals->i_month;
 
 		if (Journals->next == NULL) break;
 		Journals = Journals->next;

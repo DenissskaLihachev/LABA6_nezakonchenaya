@@ -31,7 +31,7 @@ void TextBook::getTextBook(TextBook*& TextBooks, TextBook*& headTextBooks, TextB
 {
 	if (TextBooks == NULL && headTextBooks == NULL && tailTextBooks == NULL)
 	{
-		cout << "\n\tНечего выводить... ";
+		cout << "\nПусто";
 		return;
 	}
 
@@ -42,12 +42,14 @@ void TextBook::getTextBook(TextBook*& TextBooks, TextBook*& headTextBooks, TextB
 	while (true)
 	{
 		counter++;
-		cout << "\n\t" << counter << " Журнал:";
+		cout << "\n" << counter << " Журнал:";
 
 		TextBooks->getPrintPublication();
 
-		if (s_purpose != "None")	cout << "\tНазначение: " << this->s_purpose;
-		if (i_purpose != 0)			cout << "\tНазначение: " << this->i_purpose;
+		if (s_purpose != "None")	
+			cout << "\tНазначение: " << this->s_purpose;
+		if (i_purpose != 0)			
+			cout << "\tНазначение: " << this->i_purpose;
 
 		if (TextBooks->next == NULL) break;
 		TextBooks = TextBooks->next;

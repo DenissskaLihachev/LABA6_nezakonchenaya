@@ -15,14 +15,20 @@ int PrintPublication::getConter()
 
 void PrintPublication::getPrintPublication()
 {
-	if (s_publisher != "None")		cout << "\tИздательство: " << this->s_publisher;
-	if (i_publisher != 0)			cout << "\tИздательство: " << this->i_publisher;
+	if (s_publisher != "None")		
+		cout << "\tИздательство: " << this->s_publisher;
+	if (i_publisher != 0)			
+		cout << "\tИздательство: " << this->i_publisher;
 
-	if (s_year != "None")			cout << "\tГод: " << this->s_year;
-	if (i_year != 0)				cout << "\tГод: " << this->i_year;
+	if (s_year != "None")			
+		cout << "\tГод: " << this->s_year;
+	if (i_year != 0)				
+		cout << "\tГод: " << this->i_year;
 
-	if (s_title != "None")			cout << "\tНазвание: " << this->s_title;
-	if (i_title != 0)				cout << "\tНазвание: " << this->i_title;
+	if (s_title != "None")			
+		cout << "\tНазвание: " << this->s_title;
+	if (i_title != 0)				
+		cout << "\tНазвание: " << this->i_title;
 }
 
 void PrintPublication::setPublisher_s(string s_publisher)
